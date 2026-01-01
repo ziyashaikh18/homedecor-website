@@ -1,0 +1,55 @@
+<?php
+// 1. Indexed (Numeric) Array
+$fruits = ["Apple", "Banana", "Cherry"];
+echo "<h3>Indexed Array:</h3>";
+foreach ($fruits as $fruit) {
+    echo $fruit . "<br>";
+}
+
+// 2. Associative Array
+$person = [
+    "name" => "Ziya",
+    "age" => 19,
+    "city" => "Mumbai"
+];
+echo "<h3>Associative Array:</h3>";
+foreach ($person as $key => $value) {
+    echo "$key : $value <br>";
+}
+
+// 3. Multidimensional Array
+$products = [
+    ["name" => "Wooden Vase", "price" => 500],
+    ["name" => "Table Lamp", "price" => 1200],
+    ["name" => "Wall Clock", "price" => 800]
+];
+echo "<h3>Multidimensional Array:</h3>";
+foreach ($products as $product) {
+    echo "Product: {$product['name']} - ₹{$product['price']}<br>";
+}
+
+// 4. Mixed Array
+$mixed = [
+    "name" => "Ziya",
+    0 => "Student",
+    "age" => 19
+];
+echo "<h3>Mixed Array:</h3>";
+foreach ($mixed as $key => $value) {
+    echo "$key : $value <br>";
+}
+
+// 5. Constant Array (Using define)
+define("COLORS", ["Red", "Green", "Blue"]);
+echo "<h3>Constant Array:</h3>";
+foreach (COLORS as $color) {
+    echo $color . "<br>";
+}
+
+// 6. Range Array
+$numbers = range(1, 5);
+echo "<h3>Range Array:</h3>";
+foreach ($numbers as $number) {
+    echo $number . "<br>";
+}
+?>

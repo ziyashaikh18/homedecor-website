@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Find Products - COZY DECOR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2d4e0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #6139bd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+        }
+        .search-button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: #3a468b;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: #219150;
+        }
+        .results {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .result-item {
+            background-color: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .result-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        .result-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Your Perfect Home Decor</h1>
+    <div class="search-container">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-box" 
+            placeholder="Search for vases, wall art, lamps..."
+        >
+        <button class="search-button" onclick="searchProducts()">🔍</button>
+    </div>
+
+    <div class="results" id="results"></div>
+
+    <script>
+        const products = [
+            { name: "Wooden Vase", link: "woodenvase.html", img: "woodenvase.jpg" },
+            { name: "Wall Art Painting", link: "wallart.html", img: "wallart.jpg" },
+            { name: "Ceramic Lamp", link: "ceramiclamp.html", img: "ceramiclamp.jpg" },
+            { name: "Decorative Mirror", link: "mirror.html", img: "mirror.jpg" },
+            { name: "Indoor Plant Pot", link: "plantpot.html", img: "plantpot.jpg" }
+        ];
+
+        function searchProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query)
+            );
+
+            if (filteredProducts.length === 0) {
+                resultsDiv.innerHTML = '<div class="result-item">No results found.</div>';
+            } else {
+                filteredProducts.forEach(product => {
+                    resultsDiv.innerHTML += `
+                        <div class="result-item">
+                            <img src="${product.img}" alt="${product.name}">
+                            <a href="${product.link}">${product.name}</a>
+                        </div>
+                    `;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

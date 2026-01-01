@@ -1,0 +1,31 @@
+products {
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+product {
+    display: block;
+    border: 2px solid #4CAF50;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+}
+
+name {
+    display: block;
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.2em;
+}
+
+price {
+    display: block;
+    color: #FF5722;
+    margin: 5px 0;
+}
+
+description {
+    display: block;
+    color: #555;
+}

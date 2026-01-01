@@ -1,0 +1,15 @@
+products {
+    background-color: blueviolet;
+    color: black;
+    display: block; /* Important for proper rendering */
+    padding: 10px;
+    border: 2px solid black;
+}
+
+go, come, dim {
+    display: block;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin: 5px 0;
+}

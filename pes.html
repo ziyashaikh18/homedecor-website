@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor Combo - Product Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .decor-product-details {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 50px; /* Increased gap for better spacing */
+}
+
+.decor-product-image {
+    flex: 1.5; /* Makes the image take more space */
+}
+
+.decor-product-image img {
+    width: 100%;
+    max-width: 750px; /* Maximized image size */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+.decor-product-info {
+    flex: 1; /* Content adapts to remaining space */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+        .decor-product-info h2 {
+            color: #ff3f6c;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 1.5rem;
+            color: #ff3f6c;
+        }
+        .discount-price {
+            color: #777;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        .offer-price {
+            color: green;
+            margin-top: 5px;
+        }
+        .offer-details {
+            color: #27a844;
+            margin-top: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li::before {
+            content: "✔";
+            color: #ff3f6c;
+            margin-right: 8px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .button-container button {
+            background-color: #ff3f6c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .button-container .buy-now {
+            background-color: #9c27b0;
+        }
+        .button-container button:hover {
+            background-color: #e7355d;
+            transform: scale(1.05);
+        }
+        .button-container .cart-btn::before {
+            content: "\f07a"; 
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 5px;
+        }
+        .button-container .buy-now::before {
+            content: "\f4b8"; 
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 5px;
+        }
+        .delivery-options {
+            margin-top: 15px;
+            color: #27a844;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="decor-product-details">
+        <div class="decor-product-image">
+            <img src="images/main.jpg" alt="Decor Combo Set">
+        </div>
+
+        <div class="decor-product-info">
+            <h2>Decor COMBO</h2>
+            <span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </span>
+            <p class="price">Price: <strong>₹3999.00</strong> <span class="discount-price">₹4999.00</span> (20% OFF)</p>
+            <p class="offer-price">₹390 with 1 Offer</p>
+            <p class="offer-details">₹40 off | Offer for you</p>
+            <p>Our carefully curated Decor Combo includes premium decor items that add warmth and style to your space.</p>
+            <ul>
+                <li>1x Elegant Wooden Vase (Handcrafted Design)</li>
+                <li>2x Scented Candles (Lavender & Rose)</li>
+                <li>1x Artistic Ceramic Pot (Unique Design)</li>
+                <li>Premium Packaging with Gift Wrap Option</li>
+            </ul>
+            <p>Perfect for housewarming gifts, festive decor, or enhancing your home’s aesthetic.</p>
+            <div class="button-container">
+                <a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+                <a href="buy.html"><button class="buy-now">Buy Now</button></a>
+            </div>
+            <div class="delivery-options">
+                🚚 Free Delivery
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CozyNest Decor. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
